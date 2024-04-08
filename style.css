@@ -58,7 +58,7 @@ li {
   font-size: 1.5rem;
 }
 .logo > img {
-  width: 30%;
+  width: 4rem;
 }
 
 .header,
@@ -70,31 +70,23 @@ li {
   --flex-gap: 1rem;
 
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--flex-gap);
 }
 
-.search-container {
-  display: flex;
-  align-items: center;
-  gap: var(--flex-gap);
-}
-
-.header > .icon {
+#bell {
   margin-left: auto;
 }
-
-.search-container {
-  flex: 1;
-}
-
 input {
   background-color: hsl(214, 32%, 91%);
   border: transparent;
   border-radius: 2rem;
-  flex: 1;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
+  flex: 1;
+  min-width: 10%;
+  max-width: 55%;
 }
 
 .icon {
@@ -104,8 +96,4 @@ input {
 .profile-pic {
   width: var(--profile-pic-size);
   border-radius: 100vmax;
-}
-
-.sub-header {
-  /* grid-row: 2 / 3; */
 }
