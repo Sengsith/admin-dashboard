@@ -2,6 +2,7 @@
   --icon-size: 1.75rem;
   --sidebar-icon-size: 1.5rem;
   --profile-pic-size: 4rem;
+  --bg-accent-blue: hsl(201, 79%, 46%);
 }
 
 * {
@@ -31,7 +32,7 @@ li {
 }
 
 .sidebar {
-  background-color: hsl(201, 79%, 46%);
+  background-color: var(--bg-accent-blue);
   color: white;
   display: grid;
   padding-left: 1rem;
@@ -66,7 +67,8 @@ li {
   padding: 1rem 2rem;
 }
 
-.header {
+.header,
+.sub-header {
   --flex-gap: 1rem;
 
   display: flex;
@@ -96,4 +98,16 @@ input {
 .profile-pic {
   width: var(--profile-pic-size);
   border-radius: 100vmax;
+}
+
+.sub-header > button:first-of-type {
+  margin-left: auto;
+}
+.sub-header > button {
+  background-color: var(--bg-accent-blue);
+  color: white;
+  border: transparent;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
 }
