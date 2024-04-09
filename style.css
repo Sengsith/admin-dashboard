@@ -6,6 +6,7 @@
   --profile-pic-size: 3rem;
   --sub-header-pic-size: 4.5rem;
   --bg-accent-blue: hsl(201, 79%, 46%);
+  --bg-main-gray: hsl(214, 32%, 91%);
 }
 
 * {
@@ -31,8 +32,8 @@ li {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 100px 100px 400px 400px;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 100px 100px 300px 300px;
 }
 
 .sidebar {
@@ -72,7 +73,8 @@ li {
 .sub-header {
   --flex-gap: 1rem;
 
-  padding: 1rem 2rem;
+  grid-column: 2 / 4;
+  padding: 0 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -106,6 +108,10 @@ input {
   border-radius: 100vmax;
 }
 
+.sub-header {
+  position: relative;
+  box-shadow: -1px 8px 5px -3px rgba(115, 115, 115, 1);
+}
 .sub-profile-pic {
   width: var(--sub-header-pic-size);
   border-radius: 100vmax;
@@ -128,4 +134,45 @@ input {
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.projects {
+  padding: 2rem 1rem;
+  background-color: var(--bg-main-gray);
+  grid-row: 3 / 5;
+  grid-column: 2 / 4;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  /* TODO: remove max-width */
+  background-color: white;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+}
+.card > p {
+  color: hsl(0, 0%, 39%);
+  margin-bottom: 4rem;
+}
+.actions {
+  align-self: flex-end;
+}
+.actions > .icon {
+  margin-left: 1rem;
+}
+
+.announcements {
+  padding: 2rem 1rem;
+  background-color: var(--bg-main-gray);
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+
+.trending {
+  padding: 2rem 1rem;
+  background-color: var(--bg-main-gray);
+  grid-row: 4 / 5;
+  grid-column: 3 / 4;
 }
