@@ -224,3 +224,25 @@ hr {
   grid-row: 4 / 5;
   grid-column: 3 / 4;
 }
+.trending-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2.5rem 2rem;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.trending-profile {
+  display: flex;
+  gap: 1rem;
+}
+.trending-profile > img {
+  border-radius: 100vmax;
+  width: var(--profile-pic-size);
+}
+.profile-name {
+  font-size: 1.2rem;
+  color: var(--text-desc);
+}
