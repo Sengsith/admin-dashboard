@@ -7,6 +7,7 @@
   --sub-header-pic-size: 4.5rem;
   --bg-accent-blue: hsl(201, 79%, 46%);
   --bg-main-gray: hsl(214, 32%, 91%);
+  --box-shadow: -1px 8px 5px -3px rgb(170, 170, 170);
 }
 
 * {
@@ -33,7 +34,7 @@ li {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 100px 100px 300px 300px;
+  grid-template-rows: 100px 100px 1fr 1fr;
 }
 
 .sidebar {
@@ -46,16 +47,16 @@ li {
   grid-template-rows: inherit;
 }
 .sidebar-li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
   display: flex;
-  font-weight: 500;
+  font-weight: 700;
 }
 .sidebar-li:nth-last-child(3) {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 .sidebar-icon {
   width: var(--sidebar-icon-size);
-  margin-right: 0.75rem;
+  margin-right: 1rem;
 }
 
 .logo {
@@ -74,7 +75,7 @@ li {
   --flex-gap: 1rem;
 
   grid-column: 2 / 4;
-  padding: 0 2rem;
+  padding: 0 4rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -110,7 +111,7 @@ input {
 
 .sub-header {
   position: relative;
-  box-shadow: -1px 8px 5px -3px rgba(115, 115, 115, 1);
+  box-shadow: var(--box-shadow);
 }
 .sub-profile-pic {
   width: var(--sub-header-pic-size);
@@ -130,28 +131,50 @@ input {
   background-color: var(--bg-accent-blue);
   color: white;
   border: transparent;
-  padding: 0.5rem 1.2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 600;
+  margin-left: 1rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
 }
 
 .projects {
   padding: 2rem 1rem;
   background-color: var(--bg-main-gray);
   grid-row: 3 / 5;
-  grid-column: 2 / 4;
+}
+.cards-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
-  /* TODO: remove max-width */
   background-color: white;
   padding: 2rem 1rem;
   border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  padding: 2.5rem 2rem;
 }
+.card::before {
+  content: "";
+  width: 10px;
+  background-color: hsl(42, 87%, 55%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
 .card > p {
   color: hsl(0, 0%, 39%);
   margin-bottom: 4rem;
