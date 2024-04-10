@@ -8,6 +8,7 @@
   --bg-accent-blue: hsl(201, 79%, 46%);
   --bg-main-gray: hsl(214, 32%, 91%);
   --box-shadow: -1px 8px 5px -3px rgb(170, 170, 170);
+  --text-desc: hsl(0, 0%, 39%);
 }
 
 * {
@@ -176,7 +177,7 @@ h3 {
 }
 
 .card > p {
-  color: hsl(0, 0%, 39%);
+  color: var(--text-desc);
   margin-bottom: 4rem;
 }
 .actions {
@@ -191,6 +192,30 @@ h3 {
   background-color: var(--bg-main-gray);
   grid-row: 3 / 4;
   grid-column: 3 / 4;
+}
+.announcements-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.announcement-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.announcement-desc {
+  color: var(--text-desc);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+hr {
+  border-color: var(--text-desc);
 }
 
 .trending {
