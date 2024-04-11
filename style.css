@@ -36,6 +36,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 100px 100px 1fr 1fr;
+  background-color: var(--bg-main-gray);
 }
 
 .sidebar {
@@ -81,6 +82,7 @@ li {
   justify-content: flex-start;
   align-items: center;
   gap: var(--flex-gap);
+  background-color: white;
 }
 
 .header > p {
@@ -145,7 +147,6 @@ h3 {
 
 .projects {
   padding: 2rem 1rem;
-  background-color: var(--bg-main-gray);
   grid-row: 3 / 5;
 }
 .cards-container {
@@ -175,7 +176,9 @@ h3 {
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
 }
-
+.card-name {
+  margin-bottom: 0.5rem;
+}
 .card > p {
   color: var(--text-desc);
   margin-bottom: 4rem;
@@ -189,7 +192,6 @@ h3 {
 
 .announcements {
   padding: 2rem 1rem;
-  background-color: var(--bg-main-gray);
   grid-row: 3 / 4;
   grid-column: 3 / 4;
 }
@@ -220,7 +222,6 @@ hr {
 
 .trending {
   padding: 2rem 1rem;
-  background-color: var(--bg-main-gray);
   grid-row: 4 / 5;
   grid-column: 3 / 4;
 }
@@ -236,6 +237,8 @@ hr {
 }
 .trending-profile {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 .trending-profile > img {
